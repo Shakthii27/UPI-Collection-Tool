@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 8s ease-in-out infinite;
+  --animate-shake: shake 0.4s ease-in-out;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 0.25;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+}
+
+/* Modern Gradient Animations & Utilities */
+.bg-mesh-gradient {
+  background-color: #0d0b26;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(95, 0, 227, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 6, 102, 0.25) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(95, 0, 227, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 6, 102, 0.2) 0px, transparent 50%);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #000666 0%, #5f00e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
